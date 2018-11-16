@@ -6,6 +6,12 @@ $desktop-large-width: 1200px;
 $desktop-x-large-width: 1400px;
 
 @mixin mobile {
+  @media screen and (min-width: #{$mobile-max-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
   @media screen and (min-width: #{$mobile-min-width}) and (max-width: #{$mobile-max-width}) {
     @content;
   }
